@@ -5,9 +5,15 @@ This safeguards the product risk of the manufacturer of AI-based products and as
 More about the project can be found on the project website (https://q-amelia.in.hs-furtwangen.de/).
 
 # Find My CNN: Search Engine for ML models
-One of the major difficulties often faced by ML practitioners is not knowing what different deep learning models exist for a particular use case. 
-There is not a single model database across various domains which exist and could provide a starting point to SME's when applying ML for the first time.
+One of the major difficulties often faced by ML practitioners is the lack of large amounts of high quality training data that is required to train deep learning models from scratch. *Transfer Learning* research is dedicated at solving this problem, by pretraining models on large upstream datasets to learn generic visual representations and, thereupon, finetune the parameters to the smaller downstream dataset. Typically, this results in significant boosts of performance, especially with extremely small datasets. Today, many pretrained models are shared publicly for various tasks, domains, and network architectures. 
+It is hard to impossible to predict the transfer learning performance and, therefore, selecting the right pretrained model for an individual problem is a painfull, time-consuming trial and error process, that many SME's cannot afford.
 
-## Version 1: Lookup version
+There is not a single model database across various domains which could provide a starting point to SME's when applying ML for the first time and with limited budget. With this search-engine we aim at reducing the time-to-deployment for SME's and cutting their budget by helping them in their early development life cycles.
 
-## Version 2: Batch search version
+## Version 1: Reduction of Model Search Space
+
+Looks up pretrained models by leveraging user-provided basic meta information such as training task, visual domain, architecture, input size, number of params etc. There is no guarantee that the shown models will transfer well to the users dataset, nor that the found subset is the best.
+
+## Version 2: Model Recommendation
+
+Suggests pretrained models based on a user-provided slice of the downstram dataset. The suggestions are **expected to perform well** on the full downstream dataset.

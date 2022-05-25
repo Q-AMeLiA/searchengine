@@ -118,10 +118,11 @@
                             { title: "Task" },
                             { title: "Visual Category" },
                             { title: "Training Dataset(s)" },
-                            //{ title: "Input Resolution" },
-                            //{ title: "Parameters" },
-                            //{ title: "Size" },
-                            { title: "Action" }
+                            { title: "Min. Resolution" }, 
+                            { title: "License" },
+                            { title: "Parameters" },
+                            { title: "Filesize" },
+                            { title: "" }
                         ],
                         "columnDefs": [
                         {
@@ -129,11 +130,11 @@
                             // `data` option, which defaults to the column being worked with, in
                             // this case `data: 0`.
                             "render": function ( data, type, row ) {
-                                return "<a href=\"" + row[4] + "\" alt=\"View Paper\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i></a>&nbsp;<a href=\"" + row[5] + "\" alt=\"View GitHub Repository\"><i class=\"fa fa-github\" aria-hidden=\"true\"></i></a>";
+                                return "<a href=\"" + row[8] + "\" alt=\"View Paper\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i></a>&nbsp;<a href=\"" + row[9] + "\" alt=\"View GitHub Repository\"><i class=\"fa fa-github\" aria-hidden=\"true\"></i></a>";
                             },
-                            "targets": 4
+                            "targets": 8
                         },
-                        { "visible": false,  "targets": [ 5 ] }
+                        { "visible": false,  "targets": [ 9 ] }
                     ]
                     }
                 );

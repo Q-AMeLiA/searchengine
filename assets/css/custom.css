@@ -53,6 +53,13 @@
     padding: 0.755em 0;
 }
 
+/* Better responsibility, but slows down rendering very much
+
+tr>td:first-of-type,
+tr>td:nth-of-type(4) {
+    overflow-wrap: anywhere;
+} */
+
 tr>td:last-of-type {
     white-space: nowrap;
 }

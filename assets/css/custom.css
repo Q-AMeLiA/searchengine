@@ -19,3 +19,8 @@
 tr > td:last-of-type {
     white-space: nowrap;
 }
+
+.dataTable select {
+    max-width: 120px;
+    display: block;
+}

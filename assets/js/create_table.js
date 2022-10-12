@@ -56,3 +56,10 @@ $(document).ready(function () {
         }
     );
 });
+
+$("#tablesearch").on('keyup click', function () {
+    $('#table')
+        .DataTable()
+        .search($('#tablesearch').val(), false, true)
+        .draw();
+});

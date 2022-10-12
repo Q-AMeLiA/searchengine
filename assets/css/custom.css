@@ -1,15 +1,21 @@
-.navbar-brand:first-of-type img {
-    height: 50px;
-}
 .navbar-brand img {
     height: 30px;
 }
-
+.navbar-brand-big img {
+    height: 50px;
+}
+.navbar-brand-big {
+    font-size: 16px;
+}
+.navbar form {
+    width: 500px;
+}
 .dataTables_wrapper .dataTables_filter {
     float: left;
     text-align: left;
     margin: 15px 0px;
     width: 100%;
+    display: none;
 }
 .dataTables_wrapper .dataTables_filter input {
     display: inline-block;

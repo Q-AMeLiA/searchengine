@@ -1,149 +1,117 @@
 <html>
-    <head>
-        <title>Q-AMeLiA | Computer Vision Searchengine</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-            * {
-                box-sizing: border-box;
-            }
 
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                min-width: 600px;
-                
-            }
+<head>
+    <title>Q-AMeLiA | Computer Vision Searchengine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            /* Create three unequal columns that floats next to each other */
-            .column {
-                float: left;
-                padding: 10px;
-               
-            }
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
-            /* Left and right column */
-            .column.side {
-                width: 0%;
-            }
+</head>
 
-            /* Middle column */
-            .column.middle {
-                width: 100%;
-            }
+<body>
 
-            /* Clear floats after the columns */
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            nav img{
-                height: 40px;
-                width: fit-content;
-            }
-
-            /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-            @media (max-width: 600px) {
-                .column.side, .column.middle {
-                    width: 100%;
-                }
-            }
-        </style>
-    </head>
-    <body>  
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="container-fluid">
-                <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item active">
-                            <img src="images/QAMeLiA_color.svg" class="nav-link"  alt="Q-AMeLiA"/>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mx-auto order-0">
-                    <a class="navbar-brand mx-auto">Computer Vision Searchengine</a>
-                </div>
-                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <img src="images/HS-Logo_90_BLAU.png" class="nav-link"  alt="Hochschule Offenburg"/>
-                        </li>
-                        <li class="nav-item">
-                            <img src="images/HKA_Logo_Logoleiste_RGB.svg" class="nav-link"  alt="Hochschule Karlsruhe"/>
-                        </li>
-                        <li class="nav-item">
-                            <img src="images/Hochschule_Furtwangen_HFU_logo.svg" class="nav-link" alt="Hochschule Furtwangen"/>
-                        </li>      
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/qamelia.svg" alt="Q-AMeLiA" height="24">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Computer Vision Searchengine</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
 
-        <div class="row" style="clear: both;">
-            <div class="column side"></div>
-            <div class="column middle">
-                <table id="table" class="table table-striped">
-                </table>
-            </div>
-            <div class="column side"></div>
-            <div class="push"></div>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/hso.svg" alt="Offenburg University of Appleid Sciences">
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/hka.svg" alt="Karlsruhe University of Appleid Sciences">
+            </a>
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/hfu.svg" alt="Furtwangen University of Appleid Sciences">
+            </a>
+
         </div>
+    </nav>
 
-        <footer class="page-footer bg-light text-center">
-            <div class="alert alert-warning" role="alert">
-                We provide the information on an "as-is" basis and make no warranties regarding any information or licenses provided on or through this website, and disclaim liability for damages resulting from using the license information. If you have any questions regarding the license for a model or any other legal issues relating to it, it’s always best to consult with the maintener or a professional.
-
-
-            </div>
-            <div class="text-center p-3">
-                <p>Gef&ouml;rdert von:</p>
-                <img src="images/BW100_GR_4C_Ministerien_MWK.png" style="height: 50px; width: fit-content;" alt="Ministerium für Wissenschaft, Forschung und Kunst"/>
-            </div>
-            <div class="text-center p-3">
-                &copy; 2022 Copyright: Hochschule Offenburg, Hochschule Karlsruhe, Hochschule Furtwangen.
-                <a class="text-dark" href="https://q-amelia.in.hs-furtwangen.de/q-amelia-in-hs-furtwangen-de/">Impressum.</a>
-            </div>
-        </footer>
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
-        <script type="text/javascript" src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
-        <script type="text/javascript" src="db.json"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('#table').DataTable(
-                    {
-                        "data": db,
-                        "paging":   false,
-                        "columns": [
-                            { title: "Name" },
-                            { title: "Task" },
-                            { title: "Visual Category" },
-                            { title: "Training Dataset(s)" },
-                            { title: "Min. Resolution" }, 
-                            { title: "License" },
-                            { title: "Parameters" },
-                            { title: "Filesize" },
-                            { title: "" }
-                        ],
-                        "columnDefs": [
+    <div class="container-fluid">
+        <table id="table" class="table table-striped" style="width:100%"></table>
+    </div>
+    <br/><br/>
+    <footer class="page-footer bg-light text-center">
+        <br/><br/>
+        <div class="alert alert-warning" role="alert" style="margin: 40px;">
+            We provide the information on an "as-is" basis and make no warranties regarding any information or licenses
+            provided on or through this website, and disclaim liability for damages resulting from using the license
+            information.<br/>
+            If you have any questions regarding the license for a model or any other legal issues relating to it, it’s
+            always best to consult with the maintainer or other professionals.
+        </div>
+        </div>
+        <div class="text-center p-3">
+            <p>Funded by the:</p>
+            <img src="assets/images/mwk.png" height=70 alt="Ministerium für Wissenschaft, Forschung und Kunst" />
+        </div>
+        <div class="text-center p-3">
+            &copy; 2022 Copyright: Offenburg University of Applied Sciences, Karlsruhe University of Applied Sciences,
+            Furtwangen University of Applied Sciences.
+            <a class="text-dark" href="https://q-amelia.in.hs-furtwangen.de/q-amelia-in-hs-furtwangen-de/">Imprint &amp;
+                Privacy Notice</a>
+            <br />
+            Note: When a GitHub Pages site is visited, the visitor's IP address is logged and stored for security
+            purposes,
+            regardless of whether the visitor has signed into GitHub or not.
+            For more information about GitHub's security practices, see <a
+                href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement">GitHub Privacy
+                Statement</a>.
+        </div>
+    </footer>
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/datatables.js"></script>
+    <script type="text/javascript" src="assets/js/datatables_bootstrap5.js"></script>
+    <script type="text/javascript" src="model_db.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#table').DataTable(
+                {
+                    "data": db,
+                    "dom": '<"wrapper"flipt>',
+                    "paging": false,
+                    "columns": [
+                        { title: "Name" },
+                        { title: "Task" },
+                        { title: "Visual Category" },
+                        { title: "Training Dataset(s)" },
+                        { title: "Min. Resolution" },
+                        { title: "License" },
+                        { title: "Parameters" },
+                        { title: "Filesize" },
+                        { title: "" }
+                    ],
+                    "columnDefs": [
                         {
                             // The `data` parameter refers to the data for the cell (defined by the
                             // `data` option, which defaults to the column being worked with, in
                             // this case `data: 0`.
-                            "render": function ( data, type, row ) {
-                                return "<a href=\"" + row[8] + "\" alt=\"View Paper\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i></a>&nbsp;<a href=\"" + row[9] + "\" alt=\"View GitHub Repository\"><i class=\"fa fa-github\" aria-hidden=\"true\"></i></a>";
+                            "render": function (data, type, row) {
+                                return "<a href=\"" + row[8] + "\" alt=\"View Paper\"><i class=\"fa fa-book\" aria-hidden=\"true\"></i></a>"
+                                    + "&nbsp;<a href=\"" + row[9] + "\" alt=\"View GitHub Repository\"><i class=\"fa fa-github\" aria-hidden=\"true\"></i></a>";
                             },
                             "targets": 8
                         },
-                        { "visible": false,  "targets": [ 9 ] }
+                        { "visible": false, "targets": [9] }
                     ]
-                    }
-                );
-            } );
-        </script>
-    </body>
+                }
+            );
+        });
+    </script>
+</body>
+
 </html>

@@ -1,0 +1,21 @@
+.navbar-brand:first-of-type img {
+    height: 50px;
+}
+.navbar-brand img {
+    height: 30px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    float: left;
+    text-align: left;
+    margin: 15px 0px;
+    width: 100%;
+}
+.dataTables_wrapper .dataTables_filter input {
+    display: inline-block;
+    width: 400px;
+    margin-left: 10px;
+}
+tr > td:last-of-type {
+    white-space: nowrap;
+}

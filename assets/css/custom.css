@@ -33,8 +33,6 @@
     }
 }
 
-
-
 .dataTables_wrapper .dataTables_filter {
     float: left;
     text-align: left;
@@ -47,6 +45,12 @@
     display: inline-block;
     width: 400px;
     margin-left: 10px;
+}
+
+.dataTables_wrapper .dataTables_info {
+    float: initial;
+    text-align: center;
+    padding: 0.755em 0;
 }
 
 tr>td:last-of-type {

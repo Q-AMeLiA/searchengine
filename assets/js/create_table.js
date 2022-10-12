@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#table').DataTable(
         {
             "data": db,
-            "dom": '<"wrapper"flipt>',
+            "dom": '<"wrapper"flpti>',
             "paging": false,
             "columns": [
                 { title: "Name" },
